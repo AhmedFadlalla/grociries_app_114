@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocies_app/features/products/view/single_product_screen.dart';
 
 import 'features/splash/view/splash_screen.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SplashScreen(),
+      home: SingleProductScreen(),
     );
   }
 }

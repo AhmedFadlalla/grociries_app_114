@@ -3,6 +3,7 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:grocies_app/core/util/app_colors/app_colors.dart';
 import 'package:grocies_app/core/util/app_images/app_images.dart';
+import 'package:grocies_app/core/util/widgets/custom_image_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -51,12 +52,7 @@ class HomeScreen extends StatelessWidget {
                   autoplay: true,
                   duration: 600,
                   itemCount: 3,
-                  itemBuilder: (context, index) =>
-                      CachedNetworkImage(
-                        imageUrl: "https://img.freepik.com/free-vector/watercolor-food-facebook-cover_23-2149175710.jpg",
-                        placeholder: (context, url) => Center(child: CircularProgressIndicator()),
-                        errorWidget: (context, url, error) => Icon(Icons.error),
-                      ),
+                  itemBuilder: (context, index) =>CustomImageWidget(url: "https://img.freepik.com/free-vector/watercolor-food-facebook-cover_23-2149175710.jpg"),
                   pagination: SwiperPagination(
                       alignment: Alignment.bottomCenter,
                       builder: DotSwiperPaginationBuilder(
